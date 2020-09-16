@@ -1,0 +1,26 @@
+17/09/2020 02:34:40 devpinoyLogger Username Entered wms
+17/09/2020 02:34:41 devpinoyLogger Password Entered welcome@1
+17/09/2020 02:34:46 devpinoyLogger Login button clicked
+17/09/2020 02:34:53 devpinoyLogger Clicked on WIP
+17/09/2020 02:34:58 devpinoyLogger Clicked on Machine Tab
+17/09/2020 02:35:19 devpinoyLogger Machine Added successfully
+17/09/2020 02:35:28 devpinoyLogger Machine Filtered successfully
+17/09/2020 02:35:35 devpinoyLogger Machine Edited successfully
+17/09/2020 02:35:40 devpinoyLogger Machine Deleted successfully
+17/09/2020 02:35:47 devpinoyLogger Clicked on Operation Tab
+17/09/2020 02:35:57 devpinoyLogger Operation added successfully
+17/09/2020 02:36:05 devpinoyLogger Operation Filtered successfully
+17/09/2020 02:36:19 devpinoyLogger Operation Edited successfully
+17/09/2020 02:36:23 devpinoyLogger Operation Deleted successfully
+17/09/2020 02:36:33 devpinoyLogger Clicked on Labor Type Tab
+17/09/2020 02:36:39 devpinoyLogger Labor Type added successfully
+17/09/2020 02:36:48 devpinoyLogger Labor Type Filtered successfully
+17/09/2020 02:37:02 devpinoyLogger Labor Type Edited successfully
+17/09/2020 02:37:06 devpinoyLogger Labor Type Deleted successfully
+17/09/2020 02:37:31 devpinoyLogger Work Order with WIP checked created successfully
+17/09/2020 02:38:14 devpinoyLogger WIP > Job Operation User Added successfully
+17/09/2020 02:38:15 devpinoyLogger WIP > Job Operation created successfully
+17/09/2020 02:38:33 devpinoyLogger WIP > Job Started successfully
+17/09/2020 02:39:44 devpinoyLogger Job Operation stopped successfully
+17/09/2020 02:40:08 devpinoyLogger Job View seen for work order started
+17/09/2020 02:40:23 devpinoyLogger MachineView seen for work order started
