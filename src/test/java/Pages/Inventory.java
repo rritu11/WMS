@@ -50,7 +50,9 @@ int no;
 	
 	@FindBy(id = "ctl00_ContentPlaceHolder1_ItemGrid_ctl00_ctl02_ctl03_FilterTextBox_ItemNo")   WebElement click_filter ;
 	@FindBy(css = ".rmItem:nth-child(6) .rmText")  WebElement click_filter1 ;
-	@FindBy(xpath = "//div[@class='rgDataDiv']//td[6]")   WebElement select_item1 ;
+	@FindBy(xpath = "//div[@class='rgDataDiv']//td[3]")   WebElement select_item1 ;
+	
+	
 	
 	
 	@FindBy(xpath = "//body/form/div[@class='master']/div/table[@class='RadSplitter RadSplitter_Hay']/tbody/tr/td[@class='rspPaneHorizontal']/div/div[@class='masterContent']/div/table[@class='RadSplitter RadSplitter_Hay rspNested']/tbody/tr/td[@class='rspPane rspFirstItem rspLastItem']/div/div/div[@class='RadAjaxPanel']/div[@class='RadAjaxPanel']/div/div/div[@class='RadMultiPage RadMultiPage_Hay multiPage']/div[@class='rmpView pageAutoHeight']/div[@class='RadGrid RadGrid_Hay minHeight']/table[@class='rgMasterTable rgClipCells']/thead/tr[@class='rgCommandRow']/td[@class='rgCommandCell']/div/div/div[1]/span[2]")   WebElement click_delete_button ;
@@ -103,9 +105,9 @@ int no;
     {
    	 
 		Thread.sleep(2000);
-	    driver.navigate().back();
+	   // driver.navigate().back();
 	    Thread.sleep(2000);
-	    driver.navigate().back();
+	   // driver.navigate().back();
 	    Thread.sleep(2000);
 	    try
 	    {
@@ -187,6 +189,8 @@ int no;
 	public void edit_item_details() throws InterruptedException
     {
    	 
+		
+		
 		Thread.sleep(8000);
 		
 		
@@ -201,15 +205,15 @@ int no;
 		click_filter1.click();
 		Thread.sleep(6000);
 		
+		select_item1.click();
+		Thread.sleep(3000);
 		actions.doubleClick(select_item1).perform();
-		
 		Thread.sleep(6000);
-		
 		driver.switchTo().frame("winPopup");
 		Thread.sleep(3000);
 		
 		Click_item_source.click();
-		
+		recorder_minimum.clear();
 		recorder_minimum.sendKeys(String.valueOf(i));
 		
 		

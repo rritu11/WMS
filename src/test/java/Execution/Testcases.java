@@ -87,7 +87,7 @@ public class Testcases extends AppDriver
             	 Thread.sleep(2000);
                    }
               }
-              @Test(priority =4)
+             @Test(priority =4)
               public void CreateSalesOrder() throws InterruptedException
               {
             	  CreateSO CSobj = new CreateSO();
@@ -100,7 +100,7 @@ public class Testcases extends AppDriver
             	  CSobj.clickpicktype();
             	  CSobj.savebutton();
               }
-              @Test(priority =5)
+             @Test(priority =5)
               public void SOdetail() throws InterruptedException
               {
             	  SOdetails  soobj = new SOdetails();
@@ -112,24 +112,26 @@ public class Testcases extends AppDriver
             	  Thread.sleep(5000);
               }
               
-              @Test(priority = 6)
+              @Test(priority = 7)
 
               public void inventory() throws InterruptedException
               {
               	  Inventory inventory= new Inventory();
               	  
               	  inventory.Click_inventory_tab();
-              	
+              	System.out.println("Inventory tab clicked");
               	 
               	  inventory.Click_master_inventory_add();
-              	  
+              	System.out.println("inventory add started");
               
               	  inventory.Click_location_and_quantities();
-              	  
+              	System.out.println("location and quantity");
               	           	
               	 inventory.item_delete1();
+             	System.out.println("item deleted");
               	 
               	inventory.edit_item_details();
+            	System.out.println("item edited");
 
               	Thread.sleep(5000);
               }
@@ -137,7 +139,7 @@ public class Testcases extends AppDriver
                   
                 
 
-@Test(priority = 7)
+@Test(priority = 6)
 
 public void SOdetails() throws InterruptedException
 {
@@ -154,6 +156,7 @@ public void SOdetails() throws InterruptedException
 	 Sodetails.EnterItemQuantity();
 	 Sodetails.ClickQuickadd();
 	 Sodetails.manuallypick();
+	 Sodetails.unpick();
 	 
 	 Sodetails.addSO();
 	 
@@ -166,11 +169,14 @@ public void SOdetails() throws InterruptedException
 	 
 	 Sodetails.quickpick();
 
-
+	 Thread.sleep(5000);
 }
 @Test(priority  = 8)
 public void out() throws InterruptedException
 {
+	driver.navigate().back();
+	Thread.sleep(2000);
+	driver.navigate().back();
 	Thread.sleep(2000);
 	Logout lobj = new Logout();
 	lobj.logouts();

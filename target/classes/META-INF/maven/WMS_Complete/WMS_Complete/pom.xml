@@ -10,8 +10,8 @@
   <name>WMS_Complete</name>
   <url>http://maven.apache.org</url>
 
-  <properties>
-   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
@@ -77,6 +77,9 @@
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
+				
+				
+				
 			</plugin>
 
 
@@ -120,5 +123,22 @@
 				<version>3.0.0</version>
 			</plugin>
 		</plugins>
+		
 	</build>
+	
+	<repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>http://repo1.maven.org/maven2</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+        </repository>
+    </repositories>
+	
 </project>

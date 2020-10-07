@@ -105,6 +105,8 @@ public class SOdetails1 extends AppDriver
         @FindBy(xpath = "//body//tbody//tbody//td[3]") WebElement click_unpick_row;
       
         @FindBy(xpath = "//input[@id='btnUnPick_input']") WebElement click_unpick1;
+       
+        @FindBy(xpath = "//td[@class='rwWindowContent']//span[@class='rwInnerSpan'][contains(text(),'OK')]") WebElement click_unpick_ok;
       
         
         public void addSO() throws InterruptedException
@@ -249,7 +251,7 @@ public class SOdetails1 extends AppDriver
         public void EnterItemQuantity() throws InterruptedException
         {
         	
-        	int x= 1;
+        	int x= 5;
         	itmqtybox.sendKeys(String.valueOf(x));
         	System.out.println("Item Quantity has been Entered");
         	log.info("Item Quantity has been Entered");
@@ -274,7 +276,7 @@ public class SOdetails1 extends AppDriver
          	
         public void manuallypick() throws InterruptedException
         {	
-        	int x= 5;
+        	int x= 3;
         	
         	Thread.sleep(3000);
         	
@@ -326,7 +328,7 @@ public class SOdetails1 extends AppDriver
          	Thread.sleep(2000);
          	click_pick.click();
          	Thread.sleep(2000);
-         	click_manuallypick.click();
+         	//click_manuallypick.click();
          	Thread.sleep(2000);
          	driver.switchTo().defaultContent();
          	click_SO.click();
@@ -338,13 +340,39 @@ public class SOdetails1 extends AppDriver
          	Thread.sleep(2000);
          	select_item2.click();
          	
-         	System.out.println("item has been manually picked and shipped successfully");
-         	log.info("item has been manually picked and shipped successfully");
+         	System.out.println("item has been manually picked  successfully");
+         	log.info("item has been manually picked  successfully");
          	
          	
         
         }
         
+        public void unpick() throws InterruptedException
+        {	
+        
+        	
+     	click_SO_row1.click();
+    	Thread.sleep(2000);
+    	
+    	
+    	click_unpick.click();
+    	System.out.println("clicked on  un-pick");
+     	log.info("clicked on un- pick");
+     	driver.switchTo().frame("winQuickPick");
+     	
+     	Thread.sleep(2000);
+     	click_unpick_row.click();
+     	Thread.sleep(2000);
+     	
+     	click_unpick1.click();
+     	System.out.println("Item successfully un-picked");
+     	log.info("Item successfully un-picked");
+     	
+     	click_unpick_ok.click();
+     	
+     	click_quick_close.click();
+     	
+        }
         public void quickpick() throws InterruptedException
         {	
         	int i=1;
@@ -370,24 +398,7 @@ public class SOdetails1 extends AppDriver
         	click_quick_close.click();
         	System.out.println("Item has been picked successfully via quick pick button");
          	log.info("Item has been picked successfully via quick pick button");
-        	/*
-         	click_SO_row1.click();
-        	Thread.sleep(2000);
-        	click_quick_pick_2.click();
-        	Thread.sleep(2000);
-        	click_unpick.click();
-        	System.out.println("clicked on  un-pick");
-         	log.info("clicked on un- pick");
-         	driver.switchTo().frame("winQuickPick");
-         	click_quick_click_row.click();
-         	Thread.sleep(2000);
-         	click_unpick_row.click();
-         	Thread.sleep(2000);
-         	click_unpick_quanity.clear();
-         	Thread.sleep(2000);
-         	click_unpick_quanity.sendKeys(String.valueOf(i));
-         	Thread.sleep(2000);
-         	click_unpick1.click();*/
+        	
         }
         
         
